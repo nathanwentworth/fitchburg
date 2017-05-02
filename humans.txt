@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <Garrett Boatman> -- <Developer> -- <garrettboatman>
+    <Nathan Wentworth> -- <Developer> -- <nathanwentworth>
 
 # THANKS
 
-    <Run The Jewels 2>
+    <>
 
 # TECHNOLOGY COLOPHON
 
