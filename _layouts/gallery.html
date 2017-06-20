@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<main class="wrapper items">
+  <div class="project-item with-btn">
+    <div class="main-desc">
+      <h1 class="title title-page">{{ page.title }}</h1>
+      <p>
+        {{ page.content }}
+      </p>
+    </div>
+    <a href="{{ page.read_more }}" class="btn">read more</a>
+  </div>
+
+  {% assign col = page.col | downcase %}
+  {% for game in site[col] reversed %}
+    <div class="project-item">
+      <div class="image">
+        <img src="/assets/img/{{ game.main_image }}">
+        {% if game.images %}
+        <div class="gallery">
+        {% for image in game.images %}
+          {% if image contains "jpg" or image contains "png" or image contains "gif" %}
+          <img src="/assets/img/{{ image }}">
+          {% endif %}
+        {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="desc">
+        <a href="{{ game.url }}" class="title title-gallery title-inset">{{ game.title }}</a>
+        <p>
+          {{ game.excerpt | remove: '<p>' | remove: '</p>' }}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</main>

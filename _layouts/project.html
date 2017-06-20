@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<main class="wrapper">
+  {% if page.header_video %}
+  <div class="video">
+    {{ page.header_video }}
+  </div>
+  {% else %}
+  <img src="/assets/img/{{ page.main_image }}">
+  {% endif %}
+
+  <div class="project">
+    {% if page.images %}
+    <div class="sub-project desc">
+    {% else %}
+    <div class="sub-project desc full-width">
+    {% endif %}
+      <h1 class="title title-page">{{ page.title }}</h1>
+      {{ page.content }}
+      <ul class="data">
+        <li><b>Release Date:</b> {{ page.date | date: "%B %-d, %Y" }}</li>
+        {% if page.platforms %}
+        <li><b>Platforms:</b> {{ page.platforms | join: ', ' }}</li>
+        {% endif %}
+        {% if page.tools %}
+        <li><b>Tools used:</b> {{ page.tools | join: ', ' }}</li>
+        {% endif %}
+        {% if page.authors %}
+        <li><b>Created by:</b>
+          <ul>
+            {% for author in page.authors %}
+              <li><a href="{{ author[1] }}">{{ author[0] }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+        {% if page.ext_links %}
+        <li><b>Created by:</b>
+          <ul>
+            {% for link in page.ext_links %}
+              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+
+    {% if page.images or page.videos %}
+    <div class="sub-project images">
+    {% for image in page.images %}
+      <img src="/assets/img/{{ image }}">
+    {% endfor %}
+    {% for video in page.videos %}
+      <div class="video">
+        {{ video }}
+      </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</main>
