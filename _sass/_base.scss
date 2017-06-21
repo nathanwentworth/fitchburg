@@ -18,6 +18,22 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: $text-color;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+a:link
+a:visited {
+  border-bottom: 1px solid $accent-color;
+}
+
+a:hover
+a:active {
+  border-bottom: 1px solid $primary-color;
+}
+
 p {
   line-height: 1.425;
 }

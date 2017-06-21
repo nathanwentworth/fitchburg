@@ -22,7 +22,7 @@ layout: default
         <div class="gallery">
         {% for image in game.images %}
           {% if image contains "jpg" or image contains "png" or image contains "gif" %}
-          <img src="/assets/img/{{ image }}">
+          <img src="/assets/img/placeholder.png" data-img="/assets/img/{{ image }}">
           {% endif %}
         {% endfor %}
         </div>
@@ -37,3 +37,5 @@ layout: default
     </div>
   {% endfor %}
 </main>
+
+<script type="text/javascript" src='/assets/js/gallery.js'></script>

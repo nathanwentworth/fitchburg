@@ -2,6 +2,7 @@
 
 window.onload = function () {
   init();
+  getItemElements();
 }
 
 function init() {

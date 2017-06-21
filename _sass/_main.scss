@@ -1,5 +1,5 @@
 
-header {
+.main-header {
   width: 100%;
   background: $background-color;
   font-size: 2rem;
@@ -25,25 +25,60 @@ header {
   }
 }
 
-header nav {
+.header-nav {
+  width: 100%;
+  position: relative;
   display: inline-block;
   margin-left: auto;
   text-align: center;
 }
 
-header nav a {
+.header-nav ul {
+  float: right;
+  display: inline-block;
+  z-index: 9999;
+  position: absolute;
+  list-style: none;
+  height: 1em;
+  overflow: hidden;
+  margin: 0;
+  padding: $half-space;
+  padding-top: 0;
+}
+
+.header-nav ul:hover {
+  height: auto;
+  background: $background-color;
+}
+
+.header-nav li {
+  font-size: 0.8em;
+  margin-top: $half-space;
+}
+
+.header-nav li:first-child {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.header-nav a {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   margin-left: $spacing-unit;
+  border-bottom: 3px solid transparent;
 }
 
-header nav a:hover, header nav .selected {
-  border-bottom: 3px solid $accent-color;
+.header-nav a:link,
+.header-nav a:visited,
+.header-nav a:hover,
+.header-nav a:active {
+  color: $primary-color;
 }
 
-nav a:link, nav a:visited { color: $primary-color; }
-nav a:hover, nav a:active { color: $primary-color; }
+.header-nav a:hover, .header-nav .selected {
+  border-bottom-color: $accent-color;
+}
 
 footer {
   background: $background-color;
@@ -55,23 +90,6 @@ footer {
   height: $spacing-unit;
   width: 100%;
   background: transparent;
-}
-
-
-ul a, p a {
-  color: $text-color;
-  text-decoration: none;
-  transition: 0.1s;
-}
-
-.desc a:link, p a:link,
-.desc a:visited, p a:visited {
-  border-bottom: 1px solid $accent-color;
-}
-
-.desc a:hover, p a:hover,
-.desc a:active, p a:active {
-  border-bottom: 1px solid $primary-color;
 }
 
 .wrapper {
@@ -230,10 +248,6 @@ ul a, p a {
   margin: 0;
 }
 
-a.title {
-  border-bottom: none !important;
-}
-
 .project-item p {
   padding: $spacing-unit;
   padding-top: $double-space;
@@ -264,7 +278,7 @@ a.title {
     padding: $half-space 0;
   }
 
-  header .logo {
+  .main-header .logo {
     margin: auto;
     margin-bottom: $half-space;
     max-width: 80%;
@@ -274,7 +288,7 @@ a.title {
 
 /* ## small screens */
 @media only screen and (max-width: 667px) {
-  header {
+  .main-header {
     font-size: 1.3rem;
   }
 
@@ -283,19 +297,13 @@ a.title {
     padding: $half-space 0;
   }
 
-  header .logo {
-    // margin: auto;
+  .main-header .logo {
     margin-bottom: $half-space;
-    // max-width: 150px;
   }
 
-  header nav a {
+  .header-nav a {
     margin-left: $half-space;
   }
-
-  footer {
-  }
-
 
   .project-item .desc .title {
     font-size: 1.3rem
@@ -311,7 +319,6 @@ a.title {
     margin-top: $half-space;
   }
 
-
   .project-item {
     position: relative;
     background: $background-color;
@@ -323,18 +330,17 @@ a.title {
     margin-bottom: 48px;
   }
 
-
 }
 
 
 
 /* ## tablets and small screens */
 @media only screen and (min-width: 667px) and (max-width: 960px) {
-  header {
+  .main-header {
     font-size: 1.5rem;
   }
 
-  header nav {
+  .header-nav {
     text-align: right;
   }
 
@@ -421,9 +427,3 @@ a.title {
 
 
 }
-
-/* ## large screens */
-@media only screen and (min-width: 1200px) {
-
-}
-
