@@ -46,7 +46,7 @@
   padding-top: 0;
 }
 
-.header-nav ul:hover {
+.header-nav ul:hover, .header-nav ul.open {
   height: auto;
   background: $background-color;
 }
@@ -276,6 +276,11 @@ footer {
 /* # responsive rules */
 
 @media only screen and (max-width: 375px) {
+
+}
+
+/* ## small screens */
+@media only screen and (max-width: 667px) {
   .header-container {
     flex-direction: column;
     padding: $half-space 0;
@@ -287,10 +292,6 @@ footer {
     max-width: 80%;
   }
 
-}
-
-/* ## small screens */
-@media only screen and (max-width: 667px) {
   .main-header {
     font-size: 1.3rem;
   }
@@ -304,8 +305,18 @@ footer {
     margin-bottom: $half-space;
   }
 
-  .header-nav a {
+  .header-nav ul {
+    position: initial;
+    float: none;
+    margin-left: 0;
+  }
+
+  .header-nav > a {
     margin-left: $half-space;
+  }
+
+  .header-nav > a:first-child {
+    margin-left: 0;
   }
 
   .project-item .desc .title {
