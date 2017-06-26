@@ -6,6 +6,7 @@ authors:
   "Nathan Wentworth": "https://nathanwentworth.co"
   "Ethan Thibault": "http://ethanthibault.xyz"
   "Connor Botts": "http://connors.games"
+  "Fake Person": ""
 ext_links:
   "itch.io": "https://itch.io"
   "steam": "https://store.steampowered.com"
@@ -27,6 +28,8 @@ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<iframe frameborder="0" src="https://itch.io/embed/97545?linkback=true" width="552" height="167"></iframe>
 
 ![cool](/assets/img/friender-bender.jpg)
 

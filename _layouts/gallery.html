@@ -14,13 +14,13 @@ layout: default
   </div>
 
   {% assign col = page.col | downcase %}
-  {% for game in site[col] reversed %}
+  {% for item in site[col] reversed %}
     <div class="project-item">
       <div class="image">
-        <img src="/assets/img/{{ game.main_image }}">
-        {% if game.images %}
+        <img src="/assets/img/{{ item.main_image }}">
+        {% if item.images %}
         <div class="gallery">
-        {% for image in game.images %}
+        {% for image in item.images %}
           {% if image contains "jpg" or image contains "png" or image contains "gif" %}
           <img src="/assets/img/placeholder.png" data-img="/assets/img/{{ image }}">
           {% endif %}
@@ -29,9 +29,16 @@ layout: default
         {% endif %}
       </div>
       <div class="desc">
-        <a href="{{ game.url }}" class="title title-gallery title-inset">{{ game.title }}</a>
+
+      {% if item.ext_url %}
+        {% assign url = item.ext_url %}
+      {% else %}
+        {% assign url = item.url %}
+      {% endif %}
+
+        <a href="{{ url }}" class="title title-gallery title-inset">{{ item.title }}</a>
         <p>
-          {{ game.excerpt | remove: '<p>' | remove: '</p>' }}
+          {{ item.excerpt | remove: '<p>' | remove: '</p>' }}
         </p>
       </div>
     </div>

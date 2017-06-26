@@ -18,12 +18,12 @@ defaults:
       path: ""
       type: games
     values:
-      layout: project
+      layout: half-width
   - scope:
       path: ""
       type: events
     values:
-      layout: event
+      layout: full-width
 
 # Use this for production
 #sass:

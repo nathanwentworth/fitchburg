@@ -31,13 +31,17 @@ layout: default
         <li><b>Created by:</b>
           <ul>
             {% for author in page.authors %}
+            {% if author[1] != "" %}
               <li><a href="{{ author[1] }}">{{ author[0] }}</a></li>
+            {% else %}
+              <li>{{ author[0] }}</li>
+            {% endif %}
             {% endfor %}
           </ul>
         </li>
         {% endif %}
         {% if page.ext_links %}
-        <li><b>Created by:</b>
+        <li><b>Other links:</b>
           <ul>
             {% for link in page.ext_links %}
               <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
