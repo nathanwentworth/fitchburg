@@ -5,6 +5,8 @@ url: "http://yourwebsite.com" # The base hostname & protocol for your site. Use 
 subdirectory: "" # this is placed before all relative urls, in case you want it to be on a subdirectory
 permalink: /:title/
 
+socialimg: "/assets/img/logo-color.png"
+
 collections:
   games:
     output: true

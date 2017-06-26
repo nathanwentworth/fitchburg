@@ -13,50 +13,21 @@ window.onload = function () {
   }
 }
 
+function init() {
+  if (navUl != undefined && navBtn != undefined) {
+    positionNavUl();
+    addEventsToDropdown();
+  }
+
+  setSelectedNavItem();
+}
+
 // from https://stackoverflow.com/a/85973/7659029
 function isFunction(possibleFunction) {
   return typeof(possibleFunction) === typeof(Function);
 }
 
-function init() {
-
-  if (navUl != undefined) {
-    let headerContainer = document.getElementsByClassName('header-container')[0];
-    let headerContainerPadding = window.getComputedStyle(headerContainer).
-      getPropertyValue('padding-top');
-
-    headerY -= headerContainerPadding;
-
-    console.log(headerContainerPadding);
-
-    navUl.style.top = headerY + 'px';
-  }
-
-
-  let noClickElems = nav.querySelectorAll('.no-click');
-  let dropdownBtn = document.getElementById('dropdown-btn');
-
-  if (navBtn != undefined) {
-    navBtn.addEventListener('click', function (event) {
-      toggleMenu(event);
-    })
-  }
-
-  if (dropdownBtn != undefined) {
-    document.addEventListener('click', function (event) {
-      let target = event.target;
-      if (!target.contains(dropdownBtn)) {
-        toggleMenu(null, false);
-      }
-    });
-
-    for (let noClick of noClickElems) {
-      noClick.addEventListener('click', function(event) { toggleMenu(event) });
-    }
-  }
-
-
-
+function setSelectedNavItem() {
   if (url.pathname == "/") {
     document.getElementsByClassName('first-selected')[0].classList.add("selected");
   } else {
@@ -69,9 +40,37 @@ function init() {
       }
     }
   }
+}
 
+function positionNavUl() {
+  let headerContainer = document.getElementsByClassName('header-container')[0];
+  let headerContainerPadding = window.getComputedStyle(headerContainer).
+    getPropertyValue('padding-top');
 
-  console.log(navElems);
+  headerY -= headerContainerPadding;
+
+  console.log(headerContainerPadding);
+
+  navUl.style.top = headerY + 'px';
+}
+
+function addEventsToDropdown() {
+  navBtn.addEventListener('click', function (event) {
+    toggleMenu(event);
+  });
+
+  document.addEventListener('click', function (event) {
+    let target = event.target;
+    if (!target.contains(navBtn)) {
+      toggleMenu(null, false);
+    }
+  });
+
+  let noClickElems = nav.querySelectorAll('.no-click');
+
+  for (let noClick of noClickElems) {
+    noClick.addEventListener('click', function(event) { toggleMenu(event) });
+  }
 }
 
 function toggleMenu(event, state) {
