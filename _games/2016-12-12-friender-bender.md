@@ -20,7 +20,7 @@ A local-multiplayer sabotage driving game. Based on Sabotage Rally from Cool Gam
 
 # how we did it
 
-![cool](/assets/img/friender-bender.jpg)
+![cool](/assets/img/games/friender-bender.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -31,7 +31,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <iframe frameborder="0" src="https://itch.io/embed/97545?linkback=true" width="552" height="167"></iframe>
 
-![cool](/assets/img/friender-bender.jpg)
+![cool](/assets/img/games/friender-bender.jpg)
 
 ## header 2, here's a longer title
 
@@ -42,7 +42,7 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-![cool](/assets/img/friender-bender.jpg)
+![cool](/assets/img/games/friender-bender.jpg)
 
 
-![cool](/assets/img/friender-bender.jpg)
+![cool](/assets/img/games/friender-bender.jpg)

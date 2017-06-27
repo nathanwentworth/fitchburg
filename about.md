@@ -10,11 +10,11 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-![about](/assets/img/moon-1.jpg)
+![about](/assets/img/games/moon-1.jpg)
 
 
-![about](/assets/img/earth-1.jpg)
+![about](/assets/img/games/earth-1.jpg)
 
 
-![about](/assets/img/moon-1.jpg)
+![about](/assets/img/games/moon-1.jpg)
 

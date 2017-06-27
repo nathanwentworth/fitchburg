@@ -14,6 +14,27 @@ collections:
   events:
     output: true
     permalink: /events/:title/
+  communications-media:
+    output: true
+    permalink: /:title/
+  film-video:
+    output: true
+    permalink: /film-video/:title/
+  graphic-design:
+    output: true
+    permalink: /graphic-design/:title/
+  photography:
+    output: true
+    permalink: /photography/:title/
+  professional-communications:
+    output: true
+    permalink: /professional-communications/:title/
+  theater:
+    output: true
+    permalink: /theater/:title/
+  technical-theater:
+    output: true
+    permalink: /technical-theater/:title/
 
 defaults:
   - scope:
@@ -24,6 +45,41 @@ defaults:
   - scope:
       path: ""
       type: events
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: communications-media
+    values:
+      layout: gallery
+  - scope:
+      path: ""
+      type: film-video
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: graphic-design
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: photography
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: professional-communications
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: theater
+    values:
+      layout: full-width
+  - scope:
+      path: ""
+      type: technical-theater
     values:
       layout: full-width
 

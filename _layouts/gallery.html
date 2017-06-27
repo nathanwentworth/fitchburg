@@ -2,27 +2,29 @@
 layout: default
 ---
 
-<main class="wrapper items">
-  <div class="project-item with-btn">
+<main class="wrapper items {% if page.full_width %} x3 {% endif %}">
+  <div class="project-item {% if page.read_more %} with-btn {% endif %}">
     <div class="main-desc">
       <h1 class="title title-page">{{ page.title }}</h1>
       <p>
-        {{ page.content }}
+        {{ page.content | strip_html }}
       </p>
     </div>
+    {% if page.read_more %}
     <a href="{{ page.read_more }}" class="btn">read more</a>
+    {% endif %}
   </div>
 
   {% assign col = page.col | downcase %}
   {% for item in site[col] reversed %}
     <div class="project-item">
       <div class="image">
-        <img src="/assets/img/{{ item.main_image }}">
+        <img src="/assets/img/{{ page.col }}/{{ item.main_image }}">
         {% if item.images %}
         <div class="gallery">
         {% for image in item.images %}
           {% if image contains "jpg" or image contains "png" or image contains "gif" %}
-          <img src="/assets/img/placeholder.png" data-img="/assets/img/{{ image }}">
+          <img src="/assets/img/all/placeholder.png" data-img="/assets/img/{{ page.col }}/{{ image }}">
           {% endif %}
         {% endfor %}
         </div>

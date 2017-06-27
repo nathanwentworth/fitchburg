@@ -1,4 +1,3 @@
-let headerY = document.getElementsByTagName('header')[0].getBoundingClientRect().height;
 let nav = document.getElementById('nav');
 let navUl = nav.getElementsByTagName('ul')[0];
 let navBtn = document.getElementById('nav-btn');
@@ -46,6 +45,8 @@ function positionNavUl() {
   let headerContainer = document.getElementsByClassName('header-container')[0];
   let headerContainerPadding = window.getComputedStyle(headerContainer).
     getPropertyValue('padding-top');
+
+  let headerY = document.getElementsByTagName('header')[0].getBoundingClientRect().height;
 
   headerY -= headerContainerPadding;
 
