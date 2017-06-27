@@ -15,6 +15,11 @@
   padding: $spacing-unit 0;
 }
 
+.ie .header-container {
+  display: block;
+  clear: both;
+}
+
 .logo {
   display: inline-block;
   margin-right: auto;
@@ -23,7 +28,12 @@
 
   img {
     max-height: 50px;
+    margin: auto;
   }
+}
+
+.ie .logo {
+  float: left;
 }
 
 .header-nav {
@@ -32,6 +42,20 @@
   display: inline-block;
   margin-left: auto;
   text-align: right;
+}
+
+.ie .header-nav {
+  float: right;
+  width: auto;
+  max-width: 70%;
+}
+
+.ie .header-container:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 
 .nav-dropdown {
@@ -325,8 +349,16 @@ footer {
     padding: $half-space 0;
   }
 
-  .main-header .logo {
+  .logo {
     margin-bottom: $half-space;
+  }
+
+  .ie .logo, .ie .header-nav {
+    float: none;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header-nav {
@@ -382,6 +414,10 @@ footer {
 
   .header-container {
     width: calc(100% - #{$spacing-unit});
+  }
+
+  .ie .logo {
+    max-width: 30%;
   }
 
   .wrapper {
