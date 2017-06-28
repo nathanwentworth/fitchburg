@@ -8,7 +8,7 @@ layout: default
     {{ page.header_video }}
   </div>
   {% else %}
-  <img src="/assets/img/{{ page.collection }}/{{ page.main_image }}">
+  <img src="{{ site.github.url }}/assets/img/{{ page.collection }}/{{ page.main_image }}">
   {% endif %}
 
   <div class="project">
@@ -55,7 +55,7 @@ layout: default
     {% if page.images or page.videos %}
     <div class="sub-project images">
     {% for image in page.images %}
-      <img src="/assets/img/{{ page.collection }}/{{ image }}">
+      <img src="{{ site.github.url }}/assets/img/{{ page.collection }}/{{ image }}">
     {% endfor %}
     {% for video in page.videos %}
       <div class="video">
@@ -67,4 +67,4 @@ layout: default
   </div>
 </main>
 
-<script type="text/javascript" src='/assets/js/lightbox.js'></script>
+<script type="text/javascript" src='{{ site.github.url }}/assets/js/lightbox.js'></script>

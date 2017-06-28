@@ -19,12 +19,12 @@ layout: default
   {% for item in site[col] reversed %}
     <div class="project-item">
       <div class="image">
-        <img src="/assets/img/{{ page.col }}/{{ item.main_image }}">
+        <img src="{{ site.github.url }}/assets/img/{{ page.col }}/{{ item.main_image }}">
         {% if item.images %}
         <div class="gallery">
         {% for image in item.images %}
           {% if image contains "jpg" or image contains "png" or image contains "gif" %}
-          <img src="/assets/img/all/placeholder.png" data-img="/assets/img/{{ page.col }}/{{ image }}">
+          <img src="{{ site.github.url }}/assets/img/all/placeholder.png" data-img="{{ site.github.url }}/assets/img/{{ page.col }}/{{ image }}">
           {% endif %}
         {% endfor %}
         </div>

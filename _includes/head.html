@@ -6,7 +6,7 @@
 	<!-- Plain Description -->
 	<title>{{ site.title }}</title>
 	<meta name="description" content="{% if page.excerpt | strip_html %}{{page.excerpt | strip_html}}{% else %}{{site.tagline}}{% endif %}">
-	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="icon" type="image/png" href="{{ site.github.url }}/favicon.png">
 
 	<!-- Google+ -->
 	<link rel="publisher" href="https://plus.google.com/{{site.googleplus}}"/>
@@ -30,6 +30,6 @@
 	<meta name="twitter:url" content="{{site.url}}{{page.url}}">
 
 	<!-- CSS & fonts -->
-	<link rel="stylesheet" href="{{ site.subdirectory }}/assets/css/app.css">
+	<link rel="stylesheet" href="{{ site.github.url }}/assets/css/app.css">
 
 </head>
