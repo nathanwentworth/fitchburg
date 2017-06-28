@@ -1,8 +1,8 @@
-let nav = document.getElementById('nav');
-let navUl = nav.getElementsByTagName('ul')[0];
-let navBtn = document.getElementById('nav-btn');
-let navElems = nav.children;
-let url = window.location;
+var nav = document.getElementById('nav');
+var navUl = nav.getElementsByTagName('ul')[0];
+var navBtn = document.getElementById('nav-btn');
+var navElems = nav.children;
+var url = window.location;
 
 window.onload = function () {
   init();

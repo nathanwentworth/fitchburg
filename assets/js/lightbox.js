@@ -4,6 +4,10 @@ var lightbox;
 var lightboxImg;
 var lightboxVis;
 
+var btnLeft;
+var btnRight;
+var btnClose;
+
 var imgIndex;
 var imgLength;
 
@@ -19,9 +23,27 @@ function getImages() {
   lightbox = document.getElementById('lightbox');
   lightboxImg = document.getElementById('lightbox-img');
 
-  lightboxVis = lightbox.classList.contains('lightbox-visible');
-  lightbox.addEventListener('click', function () {
+  btnLeft = document.getElementById('lightbox-left');
+  btnRight = document.getElementById('lightbox-right');
+  btnClose = document.getElementById('lightbox-close');
+
+  btnLeft.addEventListener('click', function () {
+    incrementIndex(-1);
+  });
+
+  btnRight.addEventListener('click', function () {
+    incrementIndex(1);
+  });
+
+  btnClose.addEventListener('click', function () {
     lightboxToggle();
+  });
+
+  lightboxVis = lightbox.classList.contains('lightbox-visible');
+  lightbox.addEventListener('click', function (event) {
+    if (event.target == lightbox) {
+      lightboxToggle();
+    }
   });
 
   for (var i = 0; i < imageEls.length; i++) {
@@ -43,25 +65,29 @@ function getImages() {
       }
 
       if (event.keyCode == 37 || event.keyCode == 65) {
-        imgIndex--;
-        if (imgIndex < 0) {
-          imgIndex = imgLength - 1;
-        }
-
+        incrementIndex(-1);
       } else if (event.keyCode == 39 || event.keyCode == 68) {
-        imgIndex++;
-        if (imgIndex >= imgLength) {
-          imgIndex = 0;
-        }
+        incrementIndex(1);
       }
-
-      console.log(imgIndex);
-
-      setLightboxImage(imgIndex);
     }
   });
 
   console.log('images loaded');
+}
+
+function incrementIndex(amount) {
+  imgIndex += amount;
+
+  if (imgIndex < 0) {
+    imgIndex = imgLength - 1;
+  }
+
+  if (imgIndex >= imgLength) {
+    imgIndex = 0;
+  }
+
+  console.log(imgIndex);
+  setLightboxImage(imgIndex);
 }
 
 function getIndex(event) {
