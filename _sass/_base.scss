@@ -1,5 +1,5 @@
 /* # normalize */
-html {font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}body {margin: 0;padding:0;}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {display: block;}audio,canvas,progress,video {display: inline-block;vertical-align: baseline;}a {background-color: transparent;}a:active,a:hover {outline: 0;}b,strong {font-weight: bold;}img {border: 0;}svg:not(:root) {overflow: hidden;}hr {box-sizing: content-box;height: 0;}pre {overflow: auto;}button {overflow: visible;}audio,canvas,iframe,img,svg,video {vertical-align: middle;}fieldset {border: 0;margin: 0;padding: 0;}
+html {font-family: sans-serif;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}body {margin: 0;padding:0;}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {display: block;}audio,canvas,progress,video {display: inline-block;vertical-align: baseline;}a {background-color: transparent;}a:active,a:hover {outline: 0;}b,strong {font-weight: bold;}img {border: 0;}svg:not(:root) {overflow: hidden;}hr {-webkit-box-sizing: content-box;box-sizing: content-box;height: 0;}pre {overflow: auto;}button {overflow: visible;}audio,canvas,iframe,img,svg,video {vertical-align: middle;}fieldset {border: 0;margin: 0;padding: 0;}
 
 $half-space: $spacing-unit / 2;
 $double-space: $spacing-unit * 2;
@@ -11,7 +11,7 @@ html, body {
   margin: 0;
 }
 
-* { box-sizing: border-box; }
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 img {
   display: block;
@@ -21,6 +21,7 @@ img {
 a {
   color: $text-color;
   text-decoration: none;
+  -webkit-transition: 0.1s;
   transition: 0.1s;
   border-bottom: 1px solid $accent-color;
 }

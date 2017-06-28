@@ -1,14 +1,26 @@
 .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ie .project {
+  display: block;
 }
 
 .sub-project {
   display: inline-block;
   max-width: calc(50% - (#{$half-space} / 2));
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-top: $half-space;
   margin-bottom: $half-space;
+  vertical-align: top;
+  clear: both;
 }
 
 .sub-project.desc {
@@ -61,6 +73,7 @@
 
   img {
     margin-bottom: $half-space;
+    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 
     &:last-child {
@@ -78,9 +91,16 @@
 
 }
 
+.ie .sub-project.images {
+  float: right;
+}
+
 @media only screen and (max-width: 667px) {
   .project {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .sub-project {
     max-width: 100%;

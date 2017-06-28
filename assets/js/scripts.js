@@ -30,11 +30,11 @@ function setSelectedNavItem() {
   if (url.pathname == "/") {
     document.getElementsByClassName('first-selected')[0].classList.add("selected");
   } else {
-    for (let el of navElems) {
-      let linkText = el.innerText;
+    for (var i = 0; i < navElems.length; i++) {
+      var linkText = navElems[i].innerText;
       console.log(linkText);
-      if (url.toString().includes(el.innerText.toLowerCase())) {
-        el.classList.add("selected");
+      if (url.toString().includes(navElems[i].innerText.toLowerCase())) {
+        navElems[i].classList.add("selected");
         break;
       }
     }
@@ -42,11 +42,11 @@ function setSelectedNavItem() {
 }
 
 function positionNavUl() {
-  let headerContainer = document.getElementsByClassName('header-container')[0];
-  let headerContainerPadding = window.getComputedStyle(headerContainer).
+  var headerContainer = document.getElementsByClassName('header-container')[0];
+  var headerContainerPadding = window.getComputedStyle(headerContainer).
     getPropertyValue('padding-top');
 
-  let headerY = document.getElementsByTagName('header')[0].getBoundingClientRect().height;
+  var headerY = document.getElementsByTagName('header')[0].getBoundingClientRect().height;
 
   headerY -= headerContainerPadding;
 
@@ -61,16 +61,16 @@ function addEventsToDropdown() {
   });
 
   document.addEventListener('click', function (event) {
-    let target = event.target;
+    var target = event.target;
     if (!target.contains(navBtn)) {
       toggleMenu(null, false);
     }
   });
 
-  let noClickElems = nav.querySelectorAll('.no-click');
+  var noClickElems = nav.querySelectorAll('.no-click');
 
-  for (let noClick of noClickElems) {
-    noClick.addEventListener('click', function(event) { toggleMenu(event) });
+  for (var i = 0; i < noClickElems.length; i++) {
+    noClickElems[i].addEventListener('click', function(event) { toggleMenu(event) });
   }
 }
 
