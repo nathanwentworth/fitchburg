@@ -1,4 +1,6 @@
 
+var body;
+
 var imageEls;
 var lightbox;
 var lightboxImg;
@@ -18,6 +20,7 @@ window.addEventListener('load', function () {
 var imageSrcs = []
 function getImages() {
 
+  body = document.getElementsByTagName('body')[0];
   imageEls = document.querySelectorAll('.images')[0].getElementsByTagName('img');
   imgLength = imageEls.length;
   lightbox = document.getElementById('lightbox');
@@ -105,10 +108,15 @@ function lightboxToggle() {
   if (lightboxVis) {
     lightbox.classList.add('lightbox-hidden');
     lightbox.classList.remove('lightbox-visible');
+
+    body.classList.remove('no-scroll');
+
     lightboxVis = false;
   } else {
     lightbox.classList.add('lightbox-visible');
     lightbox.classList.remove('lightbox-hidden');
+
+    body.classList.add('no-scroll');
 
     lightboxVis = true;
 

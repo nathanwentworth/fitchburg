@@ -74,6 +74,10 @@ blockquote {
   display: none !important;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
