@@ -22,10 +22,8 @@ layout: default
         <img src="{{ site.github.url }}/assets/img/{{ page.col }}/{{ item.main_image }}">
         {% if item.images %}
         <div class="gallery">
-        {% for image in item.images %}
-          {% if image contains "jpg" or image contains "png" or image contains "gif" %}
+        {% for image in item.images limit:4 %}
           <img src="{{ site.github.url }}/assets/img/all/placeholder.png" data-img="{{ site.github.url }}/assets/img/{{ page.col }}/{{ image }}">
-          {% endif %}
         {% endfor %}
         </div>
         {% endif %}
