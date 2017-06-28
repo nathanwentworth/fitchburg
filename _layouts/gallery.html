@@ -38,7 +38,7 @@ layout: default
         {% assign url = item.url %}
       {% endif %}
 
-        <a href="{{ site.github.url }}/{{ url }}" class="title title-gallery title-inset">{{ item.title }}</a>
+        <a href="{{ site.github.url }}/{{ url | remove_first: '/' }}" class="title title-gallery title-inset">{{ item.title }}</a>
         <p>
           {{ item.excerpt | remove: '<p>' | remove: '</p>' }}
         </p>
