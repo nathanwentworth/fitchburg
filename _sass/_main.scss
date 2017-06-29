@@ -482,7 +482,7 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
 
 
 /* ## tablets and small screens */
-@media only screen and (min-width: 667px) and (max-width: 960px) {
+@media only screen and (min-width: 668px) and (max-width: 960px) {
   .main-header {
     font-size: 1.5rem;
   }
@@ -545,6 +545,16 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
     margin-bottom: $double-space;
   }
 
+  .x3 {
+    .title {
+      font-size: 1.2em;
+    }
+
+    .project-item.with-btn .title {
+      font-size: 1.7rem;
+    }
+  }
+
 
 
 
@@ -577,8 +587,8 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
   }
 
   .project-item:nth-child(2n - 1) {
-    margin-right: auto;
     margin-left: 0;
+    margin-right: auto;
   }
 
   .ie .project-item:nth-child(2n) {
@@ -594,6 +604,10 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
   .x3 {
     .project-item {
       width: calc((100% / 3) - 5px - #{$half-space});
+
+      .title {
+        font-size: 1.3em;
+      }
     }
 
     .project-item:nth-child(3n - 1) {
@@ -619,6 +633,16 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
       -webkit-column-rule: dotted 1px #DDDAD4;
               column-rule: dotted 1px #DDDAD4;
     }
+
+    .project-item.with-btn {
+      width: 100%;
+      margin-bottom: $double-space;
+
+      .title {
+        font-size: 2.25em;
+      }
+    }
+
   }
 
   .ie {

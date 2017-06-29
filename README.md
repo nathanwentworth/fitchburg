@@ -36,9 +36,11 @@ Additional optional variables are:
 - ext_links
   - this is a list of titles and urls in the following format:
 
+```
     ext_links:
       "itch.io": "https://itch.io"
       "google": "https://google.com"
+```
 
 - authors
   - this is a list of names and urls in the same format as ext_urls
