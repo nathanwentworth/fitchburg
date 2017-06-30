@@ -22,6 +22,7 @@ The only required variables for games are:
 
 - title
 - main_image
+  - please make this 16:9!
 
 Additional optional variables are:
 
@@ -48,9 +49,13 @@ Additional optional variables are:
   - this is an array of names of tools used
   - format: [Unity, 3DS Max, Adobe Illustrator]
 
-All posts are written in [markdown](https://daringfireball.net/projects/markdown/syntax) format.
+All posts are written in [markdown](https://daringfireball.net/projects/markdown/syntax) format. You can also insert any normal html into a post and it will render normally (this is good for embedding youtube videos or itch download widgets). 
 
-Check out the test file in `_drafts` for an example!
+Check out the test file in `_drafts` for an example! An easy method to create a new post is to just copy and paste another project's file and edit the pasted fields. 
+
+## Editing Communications Media category descriptions
+
+Go into `_communications-media`, open the file with the title of the concentration you want to edit, and change the text below the second set of `---`. 
 
 
 
