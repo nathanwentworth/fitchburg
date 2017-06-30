@@ -20,13 +20,13 @@ Go into the folder for the type of post you want to make, whether it be `_games`
 
 Once this file is made, insert two sets of `---` at the top of the post. In between the two dash sets, insert the variables that you need. 
 
-The only required variables for games are:
+### The only required variables for games are:
 
 - **title**
 - **main_image**
   - _please make this 16:9!_
 
-Additional optional variables are:
+### Additional optional variables are:
 
 - images
   - This is the images on the right side of the page, and in the hover gallery.
