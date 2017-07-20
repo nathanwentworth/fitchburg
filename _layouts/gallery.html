@@ -11,15 +11,20 @@ layout: default
       </p>
     </div>
     {% if page.read_more %}
-    <a href="{{ page.read_more }}" class="btn">read more</a>
+    <a href="{{ page.read_more }}" class="btn">Read More</a>
     {% endif %}
   </div>
 
   {% assign col = page.col | downcase %}
   {% for item in site[col] reversed %}
+  {% if item.featured == page.displayfeatured or page.displayfeatured == false and item.featured == nil %}
     <div class="project-item">
       <div class="image">
+        {% if item.main_image != "placeholder.png" %}
         <img src="{{ site.github.url }}/assets/img/{{ page.col }}/{{ item.main_image }}">
+        {% else %}
+        <img src="{{ site.github.url }}/assets/img/all/{{ item.main_image }}">
+        {% endif %}
         {% if item.images %}
         <div class="gallery">
         {% for image in item.images limit:4 %}
@@ -42,7 +47,14 @@ layout: default
         </p>
       </div>
     </div>
+  {% endif %}
   {% endfor %}
+
+  {% if page.displayfeatured %}
+
+  <div class="archive-container"><a class="btn btn-archive" href="/archive/">View More</a></div>
+
+  {% endif %}
 </main>
 
 <script type="text/javascript" src='{{ site.github.url }}/assets/js/gallery.js'></script>

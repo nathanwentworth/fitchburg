@@ -1,7 +1,5 @@
 ---
 title: Outerworld Image
-tags: [Unity, C#]
-roles: [Programming, Art]
 main_image: OWI_1.jpg
 exturl: https://wickedly.itch.io/outerworld-image
 ---

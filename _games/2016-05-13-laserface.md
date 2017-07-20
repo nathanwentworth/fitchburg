@@ -1,8 +1,9 @@
 ---
 title: LASERFACE
-main_image: 655993.jpg
+# main_image: 655993.jpg
 images: [655993.jpg, OWI_1.jpg, friender-bender.jpg, aleksandra-boguslawska-1510.jpg]
 ext_url: "https://google.com"
+featured: false
 ---
 Blow up a city with your face lasers! VR game made for class, Oculus DK2 required.
 

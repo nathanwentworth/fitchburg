@@ -335,6 +335,10 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
 .project-item .image {
   position: relative;
   overflow: hidden;
+
+  > img {
+    width: 100%;
+  }
 }
 
 .project-item .image .gallery {
@@ -381,16 +385,31 @@ footer a:hover, footer a:active { color: #D4D4D4; border-bottom: none; }
   margin: 0;
 }
 
+.archive-container {
+  width: 100%;
+  text-align: center;
+  margin-top: $double-space;
+  padding-bottom: calc(#{$double-space} + #{$spacing-unit});
+}
+
 .btn {
-  display: inline-block;
-  text-decoration: none;
-  position: absolute;
-  bottom: -1.5rem;
-  left: $spacing-unit;
   padding: 0.75em;
   font-weight: bold;
   font-size: 1.375em;
   background: $primary-color;
+  text-decoration: none;
+}
+
+.with-btn .btn {
+  position: absolute;
+  bottom: -1.5rem;
+  left: $spacing-unit;
+  display: inline-block;
+}
+
+.btn.btn-archive {
+  margin: auto;
+  text-align: center;
 }
 
 .btn:link, .btn:visited { color: #fff; }

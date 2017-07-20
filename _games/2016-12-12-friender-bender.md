@@ -2,6 +2,7 @@
 title: Friender Bender
 platforms: [Mac, Windows]
 tools: [Unity, Maya, Illustrator, Wwise, Git, 3DS Max]
+featured: true
 authors:
   "Nathan Wentworth": "https://nathanwentworth.co"
   "Ethan Thibault": "http://ethanthibault.xyz"

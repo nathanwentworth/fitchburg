@@ -5,6 +5,7 @@ fulltitle: "Fitchburg State University: Game Design"
 read_more: '#!'
 excerpt: Here's where a nice short description of this page will go!
 col: games
+displayfeatured: true
 ---
 
 here's a description of the game design major! this goes in the main body area in the top left! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

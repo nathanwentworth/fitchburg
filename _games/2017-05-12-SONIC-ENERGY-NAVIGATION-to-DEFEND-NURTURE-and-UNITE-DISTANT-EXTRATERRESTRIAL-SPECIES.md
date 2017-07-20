@@ -1,5 +1,6 @@
 ---
 title: SONIC ENERGY NAVIGATION to DEFEND NURTURE and UNITE DISTANT EXTRATERRESTRIAL SPECIES
+featured: true
 main_image: friender-bender.jpg
 header_video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/aF3lF6Yo-gs" frameborder="0" allowfullscreen></iframe>'
 images: [655993.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg, OWI_1.jpg]

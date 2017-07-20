@@ -42,6 +42,7 @@ defaults:
       type: games
     values:
       layout: half-width
+      main_image: placeholder.png
   - scope:
       path: ""
       type: events
